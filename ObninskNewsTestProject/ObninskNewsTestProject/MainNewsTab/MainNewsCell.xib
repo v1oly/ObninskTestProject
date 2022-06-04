@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainNewsCell" id="gTV-IL-0wX" customClass="MainNewsCell" customModule="ObninskNewsTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="141"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="141"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-yd-wk2">
+                        <rect key="frame" x="13" y="17" width="228" height="53"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="228" id="U1G-0F-Mvy"/>
+                            <constraint firstAttribute="height" constant="53" id="d39-Xz-OVe"/>
+                        </constraints>
+                        <attributedString key="attributedText"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DiG-7z-e20">
+                        <rect key="frame" x="262" y="16" width="83" height="84"/>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR9-A9-ji5">
+                        <rect key="frame" x="13" y="73" width="228" height="27"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="GNZ-fI-Fhw"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DiG-7z-e20" secondAttribute="bottom" constant="41" id="3SD-uC-vTC"/>
+                <constraint firstItem="yR9-A9-ji5" firstAttribute="top" secondItem="ASJ-yd-wk2" secondAttribute="bottom" constant="3" id="4Mw-Je-ImT"/>
+                <constraint firstItem="ASJ-yd-wk2" firstAttribute="top" relation="lessThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="17" id="JaK-6C-v9f"/>
+                <constraint firstItem="ASJ-yd-wk2" firstAttribute="trailing" secondItem="yR9-A9-ji5" secondAttribute="trailing" id="KNl-go-ue5"/>
+                <constraint firstItem="ASJ-yd-wk2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="17" id="d34-j4-64J"/>
+                <constraint firstAttribute="trailing" secondItem="DiG-7z-e20" secondAttribute="trailing" constant="12" id="nGx-7s-yIH"/>
+                <constraint firstItem="ASJ-yd-wk2" firstAttribute="leading" secondItem="yR9-A9-ji5" secondAttribute="leading" id="nTI-7G-EI2"/>
+                <constraint firstItem="yR9-A9-ji5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="oeN-pG-U9S"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="yR9-A9-ji5" secondAttribute="bottom" constant="41" id="rtn-pj-DIp"/>
+                <constraint firstItem="DiG-7z-e20" firstAttribute="leading" secondItem="ASJ-yd-wk2" secondAttribute="trailing" constant="21" id="wCg-3y-blF"/>
+                <constraint firstItem="DiG-7z-e20" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="wpG-hE-hKS"/>
+            </constraints>
+            <size key="customSize" width="357" height="141"/>
+            <connections>
+                <outlet property="dateLabel" destination="yR9-A9-ji5" id="5dy-Iy-sLR"/>
+                <outlet property="imageView" destination="DiG-7z-e20" id="8sJ-tt-SMe"/>
+                <outlet property="newsHeaderLabel" destination="ASJ-yd-wk2" id="5H4-F1-Nxn"/>
+            </connections>
+            <point key="canvasLocation" x="161.59420289855075" y="136.27232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
